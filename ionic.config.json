@@ -1,0 +1,7 @@
+{
+  "name": "Stefcoinmat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
