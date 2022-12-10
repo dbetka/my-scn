@@ -3,3 +3,7 @@ ion-img::part(image) {
   /* you can set the height value too */
   margin: 0 auto
 }
+
+.test {
+  text-align: center;
+}

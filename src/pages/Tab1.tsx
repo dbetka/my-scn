@@ -1,8 +1,13 @@
-import {IonContent, IonHeader, IonImg, IonPage, IonTitle, IonToolbar} from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import {IonContent, IonHeader, IonImg, IonInput, IonItem, IonLabel, IonPage, IonTitle, IonToolbar} from '@ionic/react';
+import {IonButton} from "@ionic/react";
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
+
+  function login () {
+    alert('login')
+  }
+
   return (
     <IonPage>
       <IonHeader>
@@ -17,7 +22,13 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <IonImg src="/assets/drawing.png" alt="logo"></IonImg>
-        <ExploreContainer name="Tab 1 page" />
+        <IonItem>
+        <IonLabel>Number input</IonLabel>
+        <IonInput type="number" placeholder="000"></IonInput>
+      </IonItem>
+        <div className={'test'}>
+          <IonButton onClick={login}>Potwierdż</IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
