@@ -3,3 +3,14 @@ ion-img::part(image) {
   /* you can set the height value too */
   margin: 0 auto
 }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+code {
+  white-space: pre-wrap;
+}
