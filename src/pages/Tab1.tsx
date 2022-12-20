@@ -8,6 +8,27 @@ const Tab1: React.FC = () => {
     alert('login')
   }
 
+  let content;
+  const pinIsCorrect = false;
+
+  if (pinIsCorrect) {
+    content = <div>
+      <IonLabel>Kwota do pobrania</IonLabel>
+      <IonInput type="number" placeholder="000"></IonInput>
+    </div>
+  } else {
+    content = <div>
+      <IonImg src="/assets/drawing.png" alt="logo"></IonImg>
+      <IonItem>
+        <IonLabel>Number input</IonLabel>
+        <IonInput type="number" placeholder="000"></IonInput>
+      </IonItem>
+      <div className={'test'}>
+        <IonButton onClick={login}>Potwierdż</IonButton>
+      </div>
+    </div>
+  }
+
   return (
     <IonPage>
       <IonHeader>
@@ -15,20 +36,14 @@ const Tab1: React.FC = () => {
           <IonTitle>Tab 1</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonImg src="/assets/drawing.png" alt="logo"></IonImg>
-        <IonItem>
-        <IonLabel>Number input</IonLabel>
-        <IonInput type="number" placeholder="000"></IonInput>
-      </IonItem>
-        <div className={'test'}>
-          <IonButton onClick={login}>Potwierdż</IonButton>
-        </div>
+        {content}
       </IonContent>
     </IonPage>
   );
